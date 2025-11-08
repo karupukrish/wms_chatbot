@@ -17,5 +17,6 @@ faiss-cpu
 # --- Utilities ---
 python-dotenv==1.0.1
 requests==2.32.3
-numpy==2.1.2
+# numpy==2.1.2
+numpy==1.26.4
 scipy==1.14.1
