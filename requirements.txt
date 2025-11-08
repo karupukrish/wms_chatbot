@@ -1,0 +1,9 @@
+fastapi==0.99.2
+"uvicorn[standard]"==0.23.2
+python-dotenv==1.0.0
+openai==1.0.0
+langchain==0.0.300
+langchain-community==0.0.45
+langchain-huggingface==0.0.23
+faiss-cpu==1.7.4
+mysql-connector-python==8.1.0
