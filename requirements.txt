@@ -1,21 +1,12 @@
-# --- Core Web Framework ---
-fastapi>=0.115.0,<0.116.0
-uvicorn[standard]>=0.30.0
-
-# --- LangChain Stack (Aligned versions) ---
-langchain==0.3.13
-langchain-core==0.3.27
-langchain-community==0.3.13
-langchain-huggingface==0.3.3
-langchain-text-splitters==0.3.3
-
-# --- AI / Embeddings ---
-sentence-transformers==3.2.1
-transformers==4.44.2
+fastapi>=0.115.0
+uvicorn[standard]
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+sentence-transformers
+transformers
 faiss-cpu
-
-# --- Math & Utilities ---
-numpy==1.26.4
-scipy==1.13.1
-python-dotenv==1.0.1
-requests==2.32.3
+numpy>=2.0.0  # Because Python 3.13 may require numpy >2.0
+scipy
+python-dotenv
+requests
