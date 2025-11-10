@@ -1,15 +1,14 @@
 import os
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import CSVLoader, PyPDFLoader
-# from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.embeddings import HuggingFaceEmbeddings
-# from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.embeddings import HuggingFaceEmbeddings  # ✅ Correct import
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-
 from config import VECTOR_DIR, DATA_DIR, CSV_FILE
 
+
 def build_vectorstore():
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
     if os.path.exists(VECTOR_DIR):
         try:
             print("✅ Loading existing vectorstore...")
@@ -49,5 +48,6 @@ def build_vectorstore():
     vectorstore.save_local(VECTOR_DIR)
     print(f"✅ Vectorstore built with {len(texts)} chunks!")
     return vectorstore
+
 
 vectorstore = build_vectorstore()
