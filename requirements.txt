@@ -31,4 +31,5 @@ numpy>=2.0.0,<2.2.0        # safe range for Python 3.13
 scipy>=1.14.1
 python-dotenv>=1.0.1
 requests>=2.32.3
+langchain-text-splitters>=0.3.0
 

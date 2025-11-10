@@ -3,7 +3,9 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import CSVLoader, PyPDFLoader
 # from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+# from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 from config import VECTOR_DIR, DATA_DIR, CSV_FILE
 
 def build_vectorstore():
